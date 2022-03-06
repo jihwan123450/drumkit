@@ -3,12 +3,14 @@ const button = document.querySelectorAll(".drum");
 var numberOfDrumButtons = button.length;
 for(i=0; i< numberOfDrumButtons; i++){
 button[i].addEventListener("click",function(){
-  var buttonInnerHTML = this.innerHTML;
+  var buttonInnerHTML = this.innerText;
   clickinnertext(buttonInnerHTML);
+  buttonAnimation(buttonInnerHTML);
 });
 }
 document.addEventListener("keypress", function(event){
  clickinnertext(event.key);
+ buttonAnimation(event.key);
 })
 
 function clickinnertext(txt){
@@ -43,3 +45,12 @@ switch(txt){
   break;
 
 }}
+
+function buttonAnimation(currentkey){
+
+  var activeButton = document.querySelector("."+currentkey);
+  activeButton.classList.add("pressed");
+  setTimeout(function(){
+    activeButton.classList.remove("pressed");
+  },100);
+}
