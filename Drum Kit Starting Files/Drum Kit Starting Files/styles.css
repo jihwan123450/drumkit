@@ -1,4 +1,4 @@
-body {
+#drumbody {
   text-align: center;
   background-color: #283149;
 }
@@ -44,6 +44,10 @@ footer {
 
 }
 
+.drum img{
+  height:100px;
+  width: 120px;
+}
 .set {
   margin: 10% auto;
 }
@@ -67,7 +71,7 @@ footer {
   border: 10px solid #404B69;
   font-size: 5rem;
   font-family: 'Arvo', cursive;
-  line-height: 2;
+  width:90%;
   font-weight: 900;
   color: #DA0463;
   text-shadow: 3px 0 #DBEDF3;
